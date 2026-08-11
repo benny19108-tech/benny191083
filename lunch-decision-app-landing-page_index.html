@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>午餐神隊友 - 智能午餐決策 App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header / Hero Section -->
+        <header class="header">
+            <span class="badge">智能午餐決策 App</span>
+            <h1>午餐神隊友</h1>
+            <p class="subtitle">專為中午面臨選擇障礙的學生與上班族打造的智能午餐決策 App，透過快速條件篩選、隨機盲抽與個人化推薦機制，讓使用者在三分鐘內解決「今天中午吃什麼」的難題。</p>
+        </header>
+
+        <!-- User Stories Section -->
+        <section class="section">
+            <h2>使用者故事 (User Stories)</h2>
+            <div class="user-stories">
+                <div class="story-card">
+                    <h3>情境一（快速決策）</h3>
+                    <p>作為趕時間的上班族，我想要輸入預算與步行距離後由系統隨機推薦一家餐廳，以便快速結束猶豫並準時返回工作崗位。</p>
+                </div>
+                <div class="story-card">
+                    <h3>情境二（飲食篩選）</h3>
+                    <p>作為有特殊飲食偏好或過敏需求的學生，我想要設定忌口標籤與飲食類型來自動過濾搜尋結果，以便安全且精準地找到符合當下需求的店家。</p>
+                </div>
+                <div class="story-card">
+                    <h3>情境三（探索嘗鮮）</h3>
+                    <p>作為喜歡發掘新店的外食族，我想要查看附近其他使用者分享的熱門清單或隨機抽籤主題包，以便打破日常鬼打牆的覓食習慣。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Table Section -->
+        <section class="section">
+            <h2>功能列表</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>功能</th>
+                            <th>使用者可以…… / 規則 / 狀態</th>
+                            <th>優先度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>快速盲抽</strong></td>
+                            <td>
+                                <ul>
+                                    <li>輸入預算與步行時間後，一鍵獲得系統隨機推薦的一家店家</li>
+                                    <li>預設步行 5–10 分鐘，預算範圍可自訂；系統帶出店家名稱、距離、平均消費</li>
+                                </ul>
+                            </td>
+                            <td><span class="p-badge p0">P0</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>條件篩選</strong></td>
+                            <td>
+                                <ul>
+                                    <li>設定忌口標籤（如：不吃辣、素食）與飲食類型（如：日式、美式）</li>
+                                    <li>勾選條件即時過濾，若無符合店家自動彈出「擴大搜尋」提示</li>
+                                </ul>
+                            </td>
+                            <td><span class="p-badge p0">P0</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>店家資訊導航</strong></td>
+                            <td>
+                                <ul>
+                                    <li>查看推薦店家的營業狀態、地圖導航與電話</li>
+                                    <li>自動判斷當前是否在營業時間內；若已歇業則自動排出抽籤池</li>
+                                </ul>
+                            </td>
+                            <td><span class="p-badge p0">P0</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>天氣與心情避難所</strong></td>
+                            <td>
+                                <ul>
+                                    <li>系統自動抓取當前天氣（或手動選擇），結合心情標籤（如：暴雨不想走遠、太熱沒胃口、寒流想補身體），推薦最合適的餐點</li>
+                                    <li>天氣自動聯動邏輯：
+                                        <ol>
+                                            <li>降雨/暴雨：自動限制步行距離在 300 公尺內或優先推薦外帶/地下街店家。</li>
+                                            <li>高溫（≥32°C）：自動提升「涼麵、冰品、酸辣輕食」權重。</li>
+                                            <li>低溫（≤15°C）：自動提升「熱湯、鍋物、高熱量」權重。</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td><span class="p-badge p1">P1</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>探索主題包</strong></td>
+                            <td>
+                                <ul>
+                                    <li>查看附近熱門推薦清單與特定主題抽籤包（如：「雨天不濕鞋美食」、「100元平價美食」）</li>
+                                    <li>依 GPS 定位與天氣自動加載周邊主題清單，支援點擊一鍵匯入為專屬抽籤池</li>
+                                </ul>
+                            </td>
+                            <td><span class="p-badge p1">P1</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>歷史決策紀錄</strong></td>
+                            <td>
+                                <ul>
+                                    <li>查閱近期的午餐決定，並進行滿意度評分</li>
+                                    <li>支援「再次再吃一次」或「近期排除」按鈕（3 天內不再抽到相同店家）</li>
+                                </ul>
+                            </td>
+                            <td><span class="p-badge p1">P1</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>社群熱門清單</strong></td>
+                            <td>
+                                <ul>
+                                    <li>瀏覽與收藏其他使用者分享的午餐私房清單</li>
+                                    <li>顯示收藏數與熱門標籤，使用者可直接點擊進行清單內隨機抽籤</li>
+                                </ul>
+                            </td>
+                            <td><span class="p-badge p2">P2</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>個人化偏好學習</strong></td>
+                            <td>
+                                <ul>
+                                    <li>讓系統根據過去點擊與排除紀錄，自動調整推薦權重</li>
+                                    <li>依歷史選擇次數建立偏好權重模型，隨機抽籤時自動增加符合喜好店家的權重</li>
+                                </ul>
+                            </td>
+                            <td><span class="p-badge p2">P2</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Technical Architecture Section -->
+        <section class="section">
+            <h2>系統架構與層級</h2>
+            <div class="arch-cards">
+                <div class="arch-card">
+                    <div class="arch-header">
+                        <span class="arch-num">1</span>
+                        <h3>展示層 (Presentation Tier / 前端 Client)</h3>
+                    </div>
+                    <p>這是使用者在手機或瀏覽器上直接操作的畫面與互動介面。</p>
+                    <p><strong>畫面呈現：</strong>提供「一鍵盲抽」、「條件/心情/天氣篩選器」、「店家地圖與卡片頁面」以及「歷史紀錄清單」。</p>
+                    <p><strong>互動邏輯：</strong>當使用者打開 App 時，展示層會取得手機目前的 GPS 定位，並允許使用者點選當下心情（如：暴怒、想犒賞自己）。當按下「開始抽籤」時，前端不會在手機裡進行複雜的運算，而是打包定位資訊與篩選條件，發送 HTTP 請求（API Call）給應用邏輯層，最後將後端傳回的餐廳結果繪製成抽籤動畫呈現給使用者。</p>
+                </div>
+
+                <div class="arch-card">
+                    <div class="arch-header">
+                        <span class="arch-num">2</span>
+                        <h3>應用邏輯層 (Application Tier / 後端 Server)</h3>
+                    </div>
+                    <p>這是整個系統的運算大腦與業務邏輯核心，負責調度資料與執行決策演算法。</p>
+                    <p><strong>天氣與地理調度：</strong>收到前端傳來的 GPS 後，先呼叫外部 OpenWeather API 取得當前氣溫與降雨狀態；同時呼叫 Google Maps / Places API 撈取周邊指定距離內的店家清單。</p>
+                    <p><strong>加權盲抽演算法：</strong></p>
+                    <ul>
+                        <li><strong>硬性過濾：</strong>比對資料庫，排除店家營業狀態為歇業、符合使用者忌口標籤（如：素食者排除肉類）、以及設定為「近 3 天排除」的店家。</li>
+                        <li><strong>動態加權：</strong>結合天氣與心情邏輯進行權重計算（例如：若「天氣暴雨」，將 300 公尺內的店家權重 ×2.0；若心情選「暴怒」，將重口味/麻辣類別權重 ×1.5）。</li>
+                        <li><strong>隨機抽籤：</strong>根據最終計算出的權重池進行隨機抽樣，選出 1 家最佳餐廳回傳給展示層。</li>
+                    </ul>
+                </div>
+
+                <div class="arch-card">
+                    <div class="arch-header">
+                        <span class="arch-num">3</span>
+                        <h3>資料層 (Data Tier / 資料庫 Database & Cache)</h3>
+                    </div>
+                    <p>這是長期儲存資料與加速查詢的倉庫。</p>
+                    <p><strong>主資料庫 (RDBMS / PostgreSQL)：</strong></p>
+                    <ul>
+                        <li><strong>使用者資料：</strong>記錄帳戶資訊、個人化偏好（預設步行時間、忌口條件）。</li>
+                        <li><strong>標籤與屬性庫：</strong>儲存所有餐廳對應的「心情」、「天氣」與「飲食類別」標籤對照表。</li>
+                        <li><strong>決策歷史紀錄：</strong>記錄每一次抽籤結果、使用者給予的評分，以及是否勾選「3 天內不再抽到」的標記。</li>
+                    </ul>
+                    <p><strong>快取資料庫 (Cache / Redis)：</strong></p>
+                    <p>用於快取熱門區域的 Google 店家資料或天氣資訊，避免每次盲抽都頻繁呼叫付費的外部 API，進而降低營運成本並大幅提升 App 載入速度。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- System States Section -->
+        <section class="section">
+            <h2>系統狀態與流程</h2>
+            <div class="state-list">
+                <div class="state-item">
+                    <h4>待命階段 (Idle)</h4>
+                    <p>App 開啟後處於準備狀態，呈現心情標籤與篩選設定。此時「開始盲抽」按鈕處於可點擊狀態。</p>
+                </div>
+                <div class="state-item">
+                    <h4>運算與請求階段 (Fetching)</h4>
+                    <p>使用者點擊「開始盲抽」後，系統立即鎖定按鈕（防止重複連點），同時向背景發起請求，取得地理位置、天氣資料，並進行店家權重運算與抽籤。</p>
+                </div>
+                <div class="state-item">
+                    <h4>結果展示階段 (ResultShown)</h4>
+                    <p>後端成功回傳最佳店家後，系統切換至展示狀態，繪製店家資訊卡片、導航按鈕，並重新解鎖操作按鈕。</p>
+                </div>
+                <div class="state-item">
+                    <h4>異常處理階段 (ErrorState)</h4>
+                    <p>若因網路超時或條件設定過度嚴格導致無符合店家，系統彈出錯誤提示，並引導使用者重試或放寬搜尋條件。</p>
+                </div>
+                <div class="state-item">
+                    <h4>狀態重置與轉移</h4>
+                    <ul>
+                        <li><strong>點擊「不喜歡？重新盲抽」：</strong>將當前店家納入臨時排除清單，直接切回運算階段重新抽籤。</li>
+                        <li><strong>點擊「導航 / 返回」：</strong>寫入歷史決策紀錄，重置頁面狀態並切回待命階段。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>三分鐘內解決覓食難題！</p>
+        </footer>
+    </div>
+</body>
+</html>
